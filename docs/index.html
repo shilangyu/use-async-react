@@ -15,11 +15,40 @@
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
     <script>
       const module = { exports: undefined };
+      const require = () => React;
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/use-async-hook"></script>
-    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/use-async-react"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <meta name="theme-color" content="#ff80ab" />
+    <style>
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      input {
+        -moz-appearance: textfield;
+        margin-right: 20px !important;
+      }
+
+      input:focus {
+        border-bottom: 1px solid #ff80ab !important;
+        box-shadow: 0 1px 0 0 #ff80ab !important;
+      }
+      input::placeholder {
+        color: grey;
+      }
+      button {
+        background-color: #ff80ab !important;
+      }
+    </style>
+
+    <title>use-async-react</title>
   </head>
-  <body>
+  <body class="container cyan lighten-3">
     <div id="root"></div>
 
     <script type="text/babel" src="./example.js"></script>
