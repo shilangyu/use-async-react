@@ -1,0 +1,25 @@
+{
+  "name": "use-async-react",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shilangyu/use-async-react.git"
+  },
+  "description": "Fully declarative use async react hook",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "postversion": "git push && git push --tags"
+  },
+  "keywords": [
+    "use-async",
+    "react-hooks",
+    "declarative"
+  ],
+  "author": "Marcin Wojnarowski (shilangyu)",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  }
+}
