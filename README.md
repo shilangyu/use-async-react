@@ -15,7 +15,7 @@ npm i use-async-react
 There is one export, default export with the react hook:
 
 ```ts
-export default function<T extends any[], U>(
+export default function <T extends any[], U>(
   promise: (...args: T) => Promise<U>
 ): {
   call: (...args: T) => void;
@@ -25,7 +25,7 @@ export default function<T extends any[], U>(
 };
 ```
 
-Example usage can be found in `docs/`, and a live demo on [github pages](https://shilangyu.dev/use-async-react):
+Example usage can be found in `docs/`, and a live demo on [github pages](https://github.shilangyu.dev/use-async-react):
 
 ```jsx
 import useAsync from "use-async-react";
@@ -34,7 +34,12 @@ import React, { useState } from "react";
 const Form = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const { call: login, error, loading, result } = useAsync(
+  const {
+    call: login,
+    error,
+    loading,
+    result,
+  } = useAsync(
     () =>
       new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -50,12 +55,12 @@ const Form = () => {
       <input
         type="text"
         value={username}
-        onChange={e => setUsername(e.target.value)}
+        onChange={(e) => setUsername(e.target.value)}
       />
       <input
         type="password"
         value={password}
-        onChange={e => setPassword(e.target.value)}
+        onChange={(e) => setPassword(e.target.value)}
       />
       <button onClick={login}>Log in</button>
       <div>
